@@ -1,7 +1,7 @@
 package com.airwallex.interview.rpn.func
 
-// main entrance for the calculator
 fun main(args:Array<String>) {
+
     // init empty stacks
     var stacks = Pair(listOf(Stack()), "")
     while (true) {
@@ -21,6 +21,7 @@ fun main(args:Array<String>) {
         stacks = Pair(stacks.first, "")
     }
     println("bye!")
+
 }
 
 fun calc(prev: Pair<List<Stack>,String>, exp:String): Pair<List<Stack>,String> {

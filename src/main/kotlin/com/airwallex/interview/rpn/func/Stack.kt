@@ -8,8 +8,7 @@ data class Stack(val elements:List<Double> = listOf()) {
     }
 
     fun pop(num: Int): Pair<Stack, Array<Double>> {
-        val length = elements.size
-        return Pair(Stack(elements.subList(0, length - num)), elements.subList(length - num, length).toTypedArray())
+        return Pair(Stack(elements.dropLast(num)), elements.takeLast(num).toTypedArray())
     }
 
     fun size(): Int {
@@ -17,7 +16,7 @@ data class Stack(val elements:List<Double> = listOf()) {
     }
 
     override fun toString(): String {
-        return super.toString()
+        return elements.joinToString(" ") { it -> if (it == 0.0) "0" else String.format("%.10f", it).trimEnd('0','.') }
     }
 
 }
