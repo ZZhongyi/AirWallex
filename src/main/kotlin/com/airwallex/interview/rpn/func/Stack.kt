@@ -16,7 +16,7 @@ data class Stack(val elements:List<Double> = listOf()) {
     }
 
     override fun toString(): String {
-        return elements.joinToString(" ") { it -> if (it == 0.0) "0" else String.format("%.10f", it).trimEnd('0','.') }
+        return elements.joinToString(" ") { it -> if (it == 0.0) "0" else String.format("%.10f", it).trimEnd('0').trimEnd('.') }
     }
 
 }

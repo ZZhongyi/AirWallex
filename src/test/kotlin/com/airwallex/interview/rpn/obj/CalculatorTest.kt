@@ -15,7 +15,7 @@ class CalculatorTest{
     @Test fun `test example2`(){
         val calc = Calculator()
         calc.calc("2 sqrt")
-        assertThat(calc.printCurrentStack()).isEqualTo("1.4142135623")
+        assertThat(calc.printCurrentStack()).isEqualTo("1.4142135624")
         calc.calc("clear 9 sqrt")
         assertThat(calc.printCurrentStack()).isEqualTo("3")
     }

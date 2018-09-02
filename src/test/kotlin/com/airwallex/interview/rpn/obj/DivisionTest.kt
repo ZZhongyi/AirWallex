@@ -6,7 +6,7 @@ class DivisionTest{
 
     private val div = Division()
     @Test fun `test division`(){
-        assertThat(div.apply(listOf(3.0,1.0))).isEqualTo(listOf(2.0))
+        assertThat(div.apply(listOf(6.0,3.0))).isEqualTo(listOf(2.0))
     }
 
     @Test fun `test division validate`(){
